@@ -9,12 +9,14 @@
 
       <a href="/gossips/new/">Crée un nouveau Gossip man !</a>
 
-      <% gossips.each do |gossip| %>
+      <% gossips.each_with_index do |gossip, index| %>
         <p>
           <%= gossip.author %><br/>
           <%= gossip.content %>
+          <a href="/gossips/<%=index%>/">Voir plus</a>
+
         </p>
       <% end %>
-      
+
   </body>
 </html>
