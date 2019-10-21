@@ -20,5 +20,9 @@ class Gossip
           all_gossips << Gossip.new(csv_line[0], csv_line[1])
         end
         return all_gossips
-      end
+    end
+
+    def self.find(id)
+        Gossip.all[id.to_i]
+    end
 end

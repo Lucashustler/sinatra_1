@@ -11,6 +11,10 @@ class ApplicationController < Sinatra::Base
         erb :new_gossip
     end
 
+    get '/gossips/:id/' do
+    potin = Gossip.find(params['id'])
+    erb :show_gossip, locals: {gossip: potin}
+    end
 
     post '/gossips/new/' do
         Gossip.new(params["gossip_author"], params["gossip_content"]).save
