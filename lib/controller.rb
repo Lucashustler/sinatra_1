@@ -22,5 +22,9 @@ class ApplicationController < Sinatra::Base
         puts "De la bombe, et du coup ça, ça doit être ce que l'utilisateur a passé dans le champ gossip_content : #{params["gossip_content"]}"
         redirect '/'
       end
+    
+    post '/gossips/id/edit/' do
+
+    end
 end
 
